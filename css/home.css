@@ -1647,9 +1647,6 @@ button {
 }
 
 @media (max-width: 992px) {
-  .owl-carousel .owl-item img {
-    width: 100%;
-  }
   .pre-loader .content {
     width: 130px;
   }
@@ -2108,7 +2105,7 @@ button {
     font-size: 24px;
   }
   .sp-offers {
-    margin: 55px 0 75px 0;
+    margin: 55px 0 85px 0;
   }
   .sp-offers .card {
     margin: 0 auto;
