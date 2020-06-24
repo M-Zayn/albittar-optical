@@ -70,6 +70,37 @@ $(function() {
       navText: ["<span class='lnr lnr-chevron-right'></span>","<span class='lnr lnr-chevron-left'></span>"]
     });
 
+
+
+    if ($(window).width() < 992) {
+
+      $(".service .row .col-md-3").wrapAll("<div class=\"owl-carousel\"></div>")
+
+      $('.service .owl-carousel').owlCarousel({
+        rtl: document.dir == 'rtl' ? true : false,
+        autoplay:true,
+        loop:true,
+        margin:1,
+        dots:true,
+        nav:false,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:1
+            },
+            1000:{
+                items:1
+            }
+        },
+        navText: ["<span class='lnr lnr-chevron-right'></span>","<span class='lnr lnr-chevron-left'></span>"]
+      });
+    }
+
+
+
     $('.brands .owl-carousel').owlCarousel({
       rtl: document.dir == 'rtl' ? true : false,
       autoplay:true,
@@ -80,10 +111,10 @@ $(function() {
       responsiveClass:true,
       responsive:{
           0:{
-              items:1
+              items:2
           },
           600:{
-              items:2
+              items:3
           },
           1000:{
               items:7,
