@@ -825,13 +825,13 @@ button {
   font-size: 16px;
   color: #fff;
   text-transform: uppercase;
-  margin: 0 0 0 20px;
+  margin: 0 0 0 25px;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
 
 [dir="ltr"] .nav-list .list li {
-  margin: 0 20px 0 0;
+  margin: 0 25px 0 0;
 }
 
 .nav-list .list li:last-child {
@@ -964,11 +964,6 @@ button {
           align-items: center;
   color: #49abdc;
   font-size: 36px;
-  margin: 0 0 0 15px;
-}
-
-[dir="ltr"] .service .serv .icon i {
-  margin: 0 15px 0 0;
 }
 
 .service .serv .icon span {
@@ -976,13 +971,13 @@ button {
   font-size: 16px;
   color: #fff;
   text-align: center;
-  padding: 15px 0;
+  padding: 15px 0 0 0;
 }
 
 /*------ service ------*/
 /*------ brands ------*/
 .brands {
-  margin: 30px 0 35px 0;
+  margin: 35px 0 35px 0;
 }
 
 .brands .brand > a {
@@ -1090,7 +1085,7 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1396,7 +1391,7 @@ button {
 }
 
 .footer ul li {
-  margin: 15px 0;
+  margin: 12px 0;
 }
 
 .footer ul a {
@@ -1640,12 +1635,6 @@ button {
 }
 
 /*------ responsive ------*/
-@media (min-width: 1600px) {
-  .owl-carousel .owl-item img {
-    width: 100%;
-  }
-}
-
 @media (max-width: 992px) {
   .pre-loader .content {
     width: 130px;
@@ -1659,7 +1648,7 @@ button {
   }
   .nav-bar .icons .icon-container {
     color: #000;
-    font-size: 20px;
+    font-size: 24px;
   }
   .nav-bar .icons .icon-container span {
     display: none;
@@ -1683,7 +1672,10 @@ button {
   .nav-bar .icons {
     width: unset;
   }
-  .nav-bar .icons .user-icon, .nav-bar .icons .fav-icon {
+  .nav-bar .icons .icon-container i {
+    padding: 0;
+  }
+  .nav-bar .icons .fav-icon {
     display: none;
   }
   .nav-bar .icons .cart-icon .counter {
@@ -1711,11 +1703,22 @@ button {
     top: 50%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
-    right: 50px;
+    right: 55px;
   }
   [dir="ltr"] .nav-bar .icons .search-icon {
     right: unset;
-    left: 50px;
+    left: 57px;
+  }
+  .nav-bar .icons .user-icon {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: 45px;
+  }
+  [dir="ltr"] .nav-bar .icons .user-icon {
+    left: unset;
+    right: 45px;
   }
   .nav-bar .icons .cart-icon {
     position: absolute;
@@ -2063,6 +2066,33 @@ button {
     padding: 15 5px;
     text-align: center;
   }
+  .service .owl-carousel {
+    position: relative;
+  }
+  .service .owl-carousel .owl-nav {
+    display: none;
+  }
+  .service .owl-carousel .owl-dots {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .service .owl-carousel .owl-dots .owl-dot {
+    width: 9px;
+    height: 9px;
+    background-color: #00000099;
+    border-radius: 50%;
+    outline: none;
+    margin: 0 5px;
+  }
+  .service .owl-carousel .owl-dots .owl-dot.active {
+    background-color: #fff;
+  }
   .brands {
     margin: 30px 0 60px 0;
   }
@@ -2119,6 +2149,9 @@ button {
   .sp-offers .owl-carousel .owl-dots {
     display: block;
     bottom: -35px;
+  }
+  .sp-offers .owl-carousel .owl-dots .owl-dot {
+    margin: 0 5px;
   }
   .sp-offers .owl-carousel .owl-dots .owl-dot.active {
     background-color: #49abdc;
